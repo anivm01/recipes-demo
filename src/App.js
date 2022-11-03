@@ -20,10 +20,15 @@ function App() {
     // Filter the current selected recipe out of the array that we pass to recipes List
     const filteredRecipes = recipesList.filter((recipe) => recipe.id !== selectedRecipe.id);
 
+    // Move the selected recipe to the front.
+    const recipesListCopy = [...recipesList]
+    const selectedRecipeInList = recipesListCopy.find((recipe)=> recipe.id === selectedRecipe.id)
+    recipesListCopy.splice(recipesListCopy.indexOf(selectedRecipeInList), 1)
+    recipesListCopy.unshift(selectedRecipeInList)
 
   return (
     <div className="App">
-      <RecipesList recipesList={filteredRecipes} handleSelectedRecipe={handleSelectedRecipe}/>
+      <RecipesList recipesList={recipesListCopy} handleSelectedRecipe={handleSelectedRecipe}/>
       <RecipesDetails selectedRecipe={selectedRecipe} />
     </div>
   );
