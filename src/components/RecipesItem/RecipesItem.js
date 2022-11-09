@@ -1,10 +1,10 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
-function RecipesItem( { imgSrc, title, description, id, handleSelectedRecipe } ) {
+function RecipesItem( { imgSrc, title, description, id } ) {
   return (
-    <div onClick={()=>{return handleSelectedRecipe(id)}} className='card'>
+    <Link to={`recipes/${id}`} className='card'>
         <img className='card__img' src={imgSrc} alt={description} />
-    </div>
+    </Link>
   )
 }
 

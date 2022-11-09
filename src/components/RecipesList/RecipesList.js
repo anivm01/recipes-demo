@@ -1,7 +1,6 @@
-import React from 'react'
 import RecipesItem from '../RecipesItem/RecipesItem'
 
-function RecipesList( { recipesList, handleSelectedRecipe } ) {
+function RecipesList( { recipesList } ) {
   return (
     <div className='list'>
         {recipesList.map((recipe, index)=>{
@@ -11,7 +10,6 @@ function RecipesList( { recipesList, handleSelectedRecipe } ) {
             description={recipe.description}
             imgSrc={recipe.img}
             id={recipe.id}
-            handleSelectedRecipe={handleSelectedRecipe}
             />)
         })}
     </div>

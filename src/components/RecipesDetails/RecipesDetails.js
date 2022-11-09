@@ -1,11 +1,10 @@
-import React from 'react'
 
 function RecipesDetails( { selectedRecipe } ) {
   return (
     <div className='details' >
         <div className='details__intro'>
             <h2 className='details__title'>{selectedRecipe.title}</h2>
-            <img className='details__img' src={selectedRecipe.img} />
+            <img className='details__img' src={selectedRecipe.img} alt={selectedRecipe.title}/>
             <p className='details__description'>{selectedRecipe.description}</p>
         </div>
         <div className='details__instructions'>

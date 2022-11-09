@@ -1,12 +1,12 @@
-.App {
-  text-align: center;
-  background-color:bisque;
-  color:firebrick;
-  font-weight: 500;
-} 
+// .App {
+//   background-color:bisque;
+//   color:firebrick;
+//   font-weight: 500;
+// } 
 
 .list {
   display: flex;
+  background-color:bisque;
   gap: 4rem;
   padding: 2rem 8rem;
 }
@@ -37,6 +37,7 @@
   &__intro {
     flex: 1;
     padding: 0 1rem 1rem;
+    text-align: center;
   }
   &__title {
     font-size: 1.5rem;
